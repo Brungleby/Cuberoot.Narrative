@@ -25,7 +25,7 @@ namespace Cuberoot.Narrative
 	///</summary>
 
 	[CreateAssetMenu(menuName = "Cuberoot/Narrative/Narrative Data", fileName = "New Narrative Data")]
-	public sealed class NarrativeNodeGraphData : EditableObject
+	public sealed class NarrativeNodeGraphData : CustomNodeGraphData
 	{
 		#region Data
 

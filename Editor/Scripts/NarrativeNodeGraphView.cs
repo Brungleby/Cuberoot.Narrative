@@ -45,8 +45,9 @@ namespace Cuberoot.Narrative
 
 		public NarrativeNodeGraphView() : base()
 		{
-			// CreateEntryPointNode();
-			AddElement(CreateEntryPointNode());
+			Debug.Log("Hi");
+			CreateEntryPointNode();
+
 		}
 
 		#endregion
