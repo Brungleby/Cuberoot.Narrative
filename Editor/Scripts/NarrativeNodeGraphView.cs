@@ -45,7 +45,6 @@ namespace Cuberoot.Narrative
 
 		public NarrativeNodeGraphView() : base()
 		{
-			Debug.Log("Narrative");
 			CreateEntryPointNode();
 		}
 
