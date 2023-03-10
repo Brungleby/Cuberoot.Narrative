@@ -45,9 +45,8 @@ namespace Cuberoot.Narrative
 
 		public NarrativeNodeGraphView() : base()
 		{
-			Debug.Log("Hi");
+			Debug.Log("Narrative");
 			CreateEntryPointNode();
-
 		}
 
 		#endregion
@@ -57,6 +56,7 @@ namespace Cuberoot.Narrative
 		private CustomNode CreateEntryPointNode()
 		{
 			var __resultNode = CreateNewNode<CustomNode>("START", Vector2.zero);
+			__resultNode.IsPredefined = true;
 
 			var __port_out = __resultNode.CreatePort("Out", Direction.Output, Orientation.Horizontal, Port.Capacity.Single);
 
