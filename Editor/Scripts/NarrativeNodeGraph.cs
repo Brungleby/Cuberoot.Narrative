@@ -25,7 +25,7 @@ namespace Cuberoot.Narrative
 	/// __TODO_ANNOTATE__
 	///</summary>
 
-	public sealed class NarrativeNodeGraph : CustomNodeGraph<NarrativeNodeGraphView>
+	public sealed class NarrativeNodeGraph : CustomNodeGraph<NarrativeNodeGraphView, NarrativeNodeGraphData>
 	{
 		#region Data
 
