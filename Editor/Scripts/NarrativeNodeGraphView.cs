@@ -45,13 +45,13 @@ namespace Cuberoot.Narrative
 
 		#endregion
 
-		#region
+		#region Overrides
 
 		public override void CreatePredefinedNodes()
 		{
 			#region Start Node
 
-			var __resultNode = CreateNewNode<CustomNode>("START", Vector2.zero);
+			var __resultNode = CreateNewNode<CustomNode>(null, null, "START");
 			__resultNode.IsPredefined = true;
 
 			var __port_out = __resultNode.CreatePort("Out", Direction.Output, Orientation.Horizontal, Port.Capacity.Single);
@@ -60,6 +60,18 @@ namespace Cuberoot.Narrative
 			__resultNode.RefreshAll();
 
 			#endregion
+		}
+
+		public override List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context)
+		{
+			return new List<SearchTreeEntry>
+			{
+				new SearchTreeGroupEntry(new GUIContent("Available Nodes"), 0),
+					new SearchTreeEntry(new GUIContent("Custom Node"))
+						{ level = 1, userData = typeof(CustomNode) },
+					new SearchTreeEntry(new GUIContent("Dialogue Node"))
+						{ level = 1, userData = typeof(NarrativeNode) },
+			};
 		}
 
 		#endregion

@@ -13,7 +13,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.UIElements;
+
 using UnityEditor;
+using UnityEditor.UIElements;
+using UnityEditor.Experimental.GraphView;
 
 using Cuberoot.Editor;
 
@@ -40,7 +44,12 @@ namespace Cuberoot.Narrative
 
 		#region
 
+		protected override void InitializeToolbar(Toolbar toolbar)
+		{
+			base.InitializeToolbar(toolbar);
 
+			toolbar.Add(new Button(() => { graph.CreateNewNode<NarrativeNode>(); }));
+		}
 
 		#endregion
 
