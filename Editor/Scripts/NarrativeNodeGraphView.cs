@@ -49,11 +49,8 @@ namespace Cuberoot.Narrative
 
 		public override void CreatePredefinedNodes()
 		{
-			CreateEntryPointNode();
-		}
+			#region Start Node
 
-		private CustomNode CreateEntryPointNode()
-		{
 			var __resultNode = CreateNewNode<CustomNode>("START", Vector2.zero);
 			__resultNode.IsPredefined = true;
 
@@ -62,7 +59,7 @@ namespace Cuberoot.Narrative
 			__resultNode.outputContainer.Add(__port_out);
 			__resultNode.RefreshAll();
 
-			return __resultNode;
+			#endregion
 		}
 
 		#endregion
