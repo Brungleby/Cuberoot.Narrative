@@ -23,9 +23,11 @@ namespace Cuberoot.Narrative
 	/// <summary>
 	/// __TODO_ANNOTATE__
 	///</summary>
-
+	[System.Serializable]
 	[CreateAssetMenu(menuName = "Cuberoot/Narrative/Narrative Data", fileName = "New Narrative Data")]
-	public sealed class NarrativeNodeGraphData : CustomNodeGraphData
+
+	public sealed class NarrativeNodeGraphData :
+	CustomNodeGraphData
 	{
 		#region Data
 

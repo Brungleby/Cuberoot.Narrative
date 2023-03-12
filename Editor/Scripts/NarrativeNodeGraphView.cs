@@ -43,14 +43,14 @@ namespace Cuberoot.Narrative
 
 		#region Construction
 
-		public NarrativeNodeGraphView() : base()
-		{
-			CreateEntryPointNode();
-		}
-
 		#endregion
 
 		#region
+
+		public override void CreatePredefinedNodes()
+		{
+			CreateEntryPointNode();
+		}
 
 		private CustomNode CreateEntryPointNode()
 		{
